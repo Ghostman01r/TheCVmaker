@@ -1,0 +1,49 @@
+/* Custom Fonts */
+.font-prata { font-family: 'Prata', serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-cutive { font-family: 'Cutive Mono', monospace; }
+
+/* Sidebar Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* PRINT STYLES */
+@media print {
+    @page { margin: 0; size: A4; }
+    
+    body { margin: 0; padding: 0; background: white; height: auto; overflow: visible; }
+    
+    .no-print, .sidebar-ui, .toolbar { display: none !important; }
+    
+    .flex-1.overflow-hidden { overflow: visible !important; height: auto !important; }
+    
+    .preview-wrapper { 
+        display: block !important; 
+        padding: 0 !important; 
+        margin: 0 !important;
+        background: white !important;
+        height: auto !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+    
+    #preview-container { 
+        display: block !important; 
+        position: relative !important;
+        left: 0 !important; 
+        top: 0 !important;
+        width: 210mm !important; 
+        height: 297mm !important; 
+        transform: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        background-color: white !important;
+        page-break-after: avoid;
+    }
+    
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
