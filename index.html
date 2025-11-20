@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Prata&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col text-slate-800 font-sans overflow-hidden">
+
+    <!-- TOOLBAR -->
+    <div class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 sticky top-0 z-50 shadow-sm no-print shrink-0">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-red-600 rounded flex items-center justify-center text-white font-bold">CV</div>
+            <span class="font-bold text-xl">Builder</span>
+        </div>
+
+        <!-- Template Buttons will be injected here by JS -->
+        <div id="template-switcher" class="flex items-center gap-4 bg-gray-100 p-1 rounded-lg"></div>
+
+        <button id="download-btn" class="flex items-center gap-2 bg-slate-900 text-white px-5 py-2 rounded-md hover:bg-slate-800 transition shadow-lg">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            <span>Download PDF</span>
+        </button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- SIDEBAR (Form) -->
+        <div class="w-96 bg-white border-r border-gray-200 flex flex-col overflow-y-auto sidebar-ui no-print shrink-0">
+            <div id="form-container" class="p-6 space-y-8 pb-20">
+                <!-- Form sections injected by JS -->
+            </div>
+        </div>
+
+        <!-- PREVIEW AREA -->
+        <div class="flex-1 bg-gray-200 overflow-y-auto p-8 flex justify-center preview-wrapper">
+            <div id="preview-container" class="bg-white shadow-2xl origin-top transform transition-transform duration-300 scale-75 lg:scale-90 xl:scale-100">
+                <!-- Template Content Injected Here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Module -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
